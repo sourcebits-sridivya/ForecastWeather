@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sG5-Fd-YJi">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="F4I-aP-O4d">
+            <objects>
+                <navigationController id="sG5-Fd-YJi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KWY-CT-ZEu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bs3-Qb-ZKp" kind="relationship" relationship="rootViewController" id="3w5-Nu-SXn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2ar-Dm-Aar" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="384" y="-55"/>
+        </scene>
+        <!--Weather Book-->
+        <scene sceneID="RUy-23-jq8">
+            <objects>
+                <collectionViewController autoresizesArchivedViewToFullSize="NO" id="bs3-Qb-ZKp" userLabel="Weather Book" customClass="WeatherCollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="KfX-Q9-THO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="3" minimumInteritemSpacing="3" id="XkF-Ol-MP1">
+                            <size key="itemSize" width="100" height="100"/>
+                            <size key="headerReferenceSize" width="50" height="50"/>
+                            <size key="footerReferenceSize" width="50" height="50"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="fHb-eq-hPI" customClass="WeatherViewcell">
+                                <rect key="frame" x="0.0" y="114" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C6V-tv-bDJ">
+                                            <rect key="frame" x="5" y="8" width="90" height="72"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="40" id="CiI-bR-H4L"/>
+                                                <constraint firstAttribute="height" constant="40" id="O3b-TH-Ieg"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="26q-N8-C3c" userLabel="Temp23">
+                                            <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfa-tW-mpi" userLabel="Date01">
+                                            <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" red="0.66666666666666663" green="0.64313725490196072" blue="0.63921568627450975" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="C6V-tv-bDJ" secondAttribute="bottom" constant="5" id="6OA-gU-IYw"/>
+                                    <constraint firstItem="xfa-tW-mpi" firstAttribute="leading" secondItem="fHb-eq-hPI" secondAttribute="leading" constant="5" id="K90-It-rCf"/>
+                                    <constraint firstAttribute="trailing" secondItem="C6V-tv-bDJ" secondAttribute="trailing" constant="5" id="P1A-3u-EfD"/>
+                                    <constraint firstAttribute="trailing" secondItem="26q-N8-C3c" secondAttribute="trailing" constant="5" id="bOA-BA-ajD"/>
+                                    <constraint firstItem="C6V-tv-bDJ" firstAttribute="leading" secondItem="xfa-tW-mpi" secondAttribute="trailing" constant="5" id="i5A-lr-nHp"/>
+                                    <constraint firstItem="xfa-tW-mpi" firstAttribute="centerY" secondItem="C6V-tv-bDJ" secondAttribute="centerY" id="lco-HG-iVn"/>
+                                    <constraint firstItem="26q-N8-C3c" firstAttribute="top" secondItem="fHb-eq-hPI" secondAttribute="top" constant="5" id="tPk-A6-Hm2"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="26q-N8-C3c"/>
+                                        <exclude reference="xfa-tW-mpi"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <exclude reference="bOA-BA-ajD"/>
+                                        <exclude reference="tPk-A6-Hm2"/>
+                                        <exclude reference="K90-It-rCf"/>
+                                        <exclude reference="lco-HG-iVn"/>
+                                        <exclude reference="6OA-gU-IYw"/>
+                                        <exclude reference="P1A-3u-EfD"/>
+                                        <exclude reference="i5A-lr-nHp"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="subviews">
+                                        <include reference="26q-N8-C3c"/>
+                                        <include reference="xfa-tW-mpi"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <include reference="bOA-BA-ajD"/>
+                                        <include reference="tPk-A6-Hm2"/>
+                                        <include reference="K90-It-rCf"/>
+                                        <include reference="lco-HG-iVn"/>
+                                        <include reference="6OA-gU-IYw"/>
+                                        <include reference="P1A-3u-EfD"/>
+                                        <include reference="i5A-lr-nHp"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outlet property="dateLabel" destination="xfa-tW-mpi" id="TMV-JX-cvA"/>
+                                    <outlet property="tempLabel" destination="26q-N8-C3c" id="Mlf-Pl-Vhr"/>
+                                    <outlet property="weatherImageView" destination="C6V-tv-bDJ" id="ccm-vd-5d1"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HeaderView" id="YOC-bA-9Hp" customClass="WeatherCollectionHeaderView">
+                            <rect key="frame" x="0.0" y="64" width="600" height="50"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <subviews>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" misplaced="YES" text="October" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e6W-WD-iDh">
+                                    <rect key="frame" x="74" y="14" width="172" height="21"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="21" id="Arg-KC-aqn"/>
+                                        <constraint firstAttribute="width" constant="172" id="HXz-0B-0j1"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="18"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.014108758223684211" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="e6W-WD-iDh" secondAttribute="trailing" constant="20" id="9Fb-fm-dfK"/>
+                                <constraint firstItem="e6W-WD-iDh" firstAttribute="top" secondItem="YOC-bA-9Hp" secondAttribute="top" constant="14" id="yra-uB-MkP"/>
+                            </constraints>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="9Fb-fm-dfK"/>
+                                </mask>
+                            </variation>
+                            <variation key="widthClass=compact">
+                                <mask key="constraints">
+                                    <include reference="9Fb-fm-dfK"/>
+                                </mask>
+                            </variation>
+                            <connections>
+                                <outlet property="title" destination="e6W-WD-iDh" id="yu9-2C-Bwq"/>
+                            </connections>
+                        </collectionReusableView>
+                        <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FooterView" id="m0p-wa-NPn">
+                            <rect key="frame" x="0.0" y="214" width="600" height="50"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" image="footer_banner.png" translatesAutoresizingMaskIntoConstraints="NO" id="7ee-Fm-t5W">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                                </imageView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="7ee-Fm-t5W" firstAttribute="leading" secondItem="m0p-wa-NPn" secondAttribute="leading" id="5Ba-Hg-SMB"/>
+                                <constraint firstItem="7ee-Fm-t5W" firstAttribute="trailing" secondItem="m0p-wa-NPn" secondAttribute="trailing" id="No1-Ly-Lkv"/>
+                                <constraint firstItem="7ee-Fm-t5W" firstAttribute="bottom" secondItem="m0p-wa-NPn" secondAttribute="bottom" id="av9-k3-bmF"/>
+                                <constraint firstItem="7ee-Fm-t5W" firstAttribute="top" secondItem="m0p-wa-NPn" secondAttribute="top" id="ybE-E7-Shw"/>
+                            </constraints>
+                        </collectionReusableView>
+                        <connections>
+                            <outlet property="dataSource" destination="bs3-Qb-ZKp" id="ExK-dY-rVn"/>
+                            <outlet property="delegate" destination="bs3-Qb-ZKp" id="oky-f1-dnN"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Recipe Book" id="ff7-nN-qrl"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PK6-dV-OGA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1366.5" y="-137"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="footer_banner.png" width="640" height="100"/>
+    </resources>
+</document>
